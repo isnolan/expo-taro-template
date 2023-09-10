@@ -20,22 +20,17 @@ module.exports = {
       },
     ],
   },
+
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx', '**/*.js'],
-      plugins: [
-        '@typescript-eslint',
-        'unused-imports',
-        'tailwindcss',
-        'simple-import-sort',
-      ],
-      extends: [
-        'plugin:tailwindcss/recommended',
-        '@react-native-community',
-        'plugin:prettier/recommended',
-      ],
+      plugins: ['@typescript-eslint', 'unused-imports', 'tailwindcss', 'simple-import-sort'],
+      extends: ['plugin:tailwindcss/recommended', '@react-native-community', 'plugin:prettier/recommended'],
+      baseUrl: './',
+      parser: 'babel-eslint',
       parserOptions: {
         project: './tsconfig.json',
+        requireConfigFile: false,
       },
       rules: {
         'prettier/prettier': [
