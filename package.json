@@ -25,13 +25,11 @@
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "eslint": "^8.49.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-i18n-json": "^4.0.0",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-tailwindcss": "^3.10.1",
-    "eslint-plugin-unicorn": "^46.0.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
-    "prettier": "^3.0.3"
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^3.0.3",
+    "typescript": "^4.9.5"
   },
   "packageManager": "pnpm@8.6.5"
 }
