@@ -81,9 +81,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace 'com.chatonce.development'
+    namespace 'ai.draftai.app.chatonce.development'
     defaultConfig {
-        applicationId 'com.chatonce.development'
+        applicationId 'ai.draftai.app.chatonce.development'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

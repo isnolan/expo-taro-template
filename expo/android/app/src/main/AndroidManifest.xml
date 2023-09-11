@@ -25,7 +25,7 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="com.chatonce.development"/>
+        <data android:scheme="ai.draftai.app.chatonce.development"/>
         <data android:scheme="chatonce"/>
       </intent-filter>
     </activity>

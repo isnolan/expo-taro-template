@@ -1,4 +1,4 @@
-package com.chatonce.development;
+package ai.draftai.app.chatonce.development;
 
 import android.app.Application;
 import android.content.res.Configuration;

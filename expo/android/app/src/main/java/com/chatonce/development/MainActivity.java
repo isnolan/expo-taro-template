@@ -1,4 +1,4 @@
-package com.chatonce.development;
+package ai.draftai.app.chatonce.development;
 
 import android.os.Build;
 import android.os.Bundle;

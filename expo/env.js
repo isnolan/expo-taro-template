@@ -28,13 +28,13 @@ require('dotenv').config({
  * Such as: bundle id, package name, app name.
  *
  * You can add them to the .env file but we think it's better to keep them here as as we use prefix to generate this values based on the APP_ENV
- * for example: if the APP_ENV is staging, the bundle id will be com.chatonce.staging
+ * for example: if the APP_ENV is staging, the bundle id will be ai.draftai.app.chatonce.staging
  */
 
-const BUNDLE_ID = 'com.chatonce'; // ios bundle id
-const PACKAGE = 'com.chatonce'; // android package name
+const BUNDLE_ID = 'ai.draftai.app.chatonce'; // ios bundle id
+const PACKAGE = 'ai.draftai.app.chatonce'; // android package name
 const NAME = 'ChatOnce'; // app name
-const EXPO_ACCOUNT_OWNER = 'expo-owner'; // expo account owner
+const EXPO_ACCOUNT_OWNER = 'draftai'; // expo account owner
 
 /**
  * We declare a function withEnvSuffix that will add a suffix to the variable name based on the APP_ENV
@@ -127,11 +127,9 @@ if (parsed.success === false) {
     parsed.error.flatten().fieldErrors,
 
     `\n❌ Missing variables in .env.${APP_ENV} file, Make sure all required variables are defined in the .env.${APP_ENV} file.`,
-    `\n💡 Tip: If you recently updated the .env.${APP_ENV} file and the error still persists, try restarting the server with the -cc flag to clear the cache.`
+    `\n💡 Tip: If you recently updated the .env.${APP_ENV} file and the error still persists, try restarting the server with the -cc flag to clear the cache.`,
   );
-  throw new Error(
-    'Invalid environment variables, Check terminal for more details '
-  );
+  throw new Error('Invalid environment variables, Check terminal for more details ');
 }
 
 const Env = parsed.data;

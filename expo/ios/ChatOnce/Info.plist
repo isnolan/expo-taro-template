@@ -27,7 +27,7 @@
       <dict>
         <key>CFBundleURLSchemes</key>
         <array>
-          <string>com.chatonce.development</string>
+          <string>ai.draftai.app.chatonce.development</string>
         </array>
       </dict>
       <dict>
