@@ -47,16 +47,15 @@ npm run dev:weapp
 
 # 结构
 
-csharp
-Copy code
+```
 .
-├── platforms/
-│ ├── expo/ # Expo 子项目
-│ └── taro/ # Taro 子项目
+├── expo/ # Expo 子项目
+├── taro/ # Taro 子项目
 ├── shared/ # 共享组件和逻辑
 ├── .eslintrc.base.json # ESLint 基础配置
 ├── tsconfig.base.json # TypeScript 基础配置
 └── README.md # 项目文档
+```
 
 # 文档
 
