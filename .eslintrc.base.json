@@ -1,4 +1,7 @@
 {
+  "extends": [
+    "plugin:prettier/recommended"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
@@ -7,7 +10,13 @@
         "endOfLine": "auto"
       }
     ],
-    "max-params": ["error", 3],
-    "max-lines-per-function": ["error", 70]
+    "max-params": [
+      "error",
+      3
+    ],
+    "max-lines-per-function": [
+      "error",
+      70
+    ]
   }
 }

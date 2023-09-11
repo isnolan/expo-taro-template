@@ -1,20 +1,16 @@
 {
+  "display": "draftai",
   "compilerOptions": {
-    "esModuleInterop": true,
     "baseUrl": ".",
-    "strict": true,
+    "allowJs": true,
+    "esModuleInterop": true,
+    "jsx": "react-native",
+    "lib": ["DOM", "ESNext"],
     "moduleResolution": "node",
-    "resolveJsonModule": true
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "target": "ESNext"
   },
-  "include": ["shared/**/*"],
-  "exclude": [
-    "node_modules",
-    "babel.config.js",
-    "metro.config.js",
-    "docs",
-    "cli",
-    "android",
-    "ios",
-    "lint-staged.config.js"
-  ]
+  "exclude": ["node_modules", "babel.config.js", "lint-staged.config.js"]
 }
