@@ -7,12 +7,7 @@ import * as React from 'react';
 import type { SvgProps } from 'react-native-svg';
 
 import { Settings, Style } from '@/screens';
-import {
-  colors,
-  Feed as FeedIcon,
-  Settings as SettingsIcon,
-  Style as StyleIcon,
-} from '@/ui';
+import { colors, Feed as FeedIcon, Settings as SettingsIcon, Style as StyleIcon } from '@/ui';
 
 import { FeedNavigator } from './feed-navigator';
 
@@ -78,8 +73,7 @@ export const TabNavigator = () => {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
-        tabBarInactiveTintColor:
-          colorScheme === 'dark' ? colors.charcoal[400] : colors.neutral[400],
+        tabBarInactiveTintColor: colorScheme === 'dark' ? colors.charcoal[400] : colors.neutral[400],
         // eslint-disable-next-line react/no-unstable-nested-components
         tabBarIcon: ({ color }) => <BarIcon name={route.name} color={color} />,
       })}

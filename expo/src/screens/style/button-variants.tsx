@@ -14,22 +14,12 @@ export const ButtonVariants = () => {
         {(Object.keys(buttonVariants) as variant[])
           .filter((v) => v !== 'defaults')
           .map((variant, index) => {
-            return (
-              <Button
-                key={`button-${index}`}
-                label={`${variant.toUpperCase()} BUTTON`}
-                variant={variant}
-              />
-            );
+            return <Button key={`button-${index}`} label={`${variant.toUpperCase()} BUTTON`} variant={variant} />;
           })}
         <Button label="Button" loading={true} variant="primary" />
         <Button label="Button" loading={true} variant="outline" />
         <Button label="PRIMARY BUTTON DISABLED" disabled variant="primary" />
-        <Button
-          label="SECONDARY BUTTON DISABLED"
-          disabled
-          variant="secondary"
-        />
+        <Button label="SECONDARY BUTTON DISABLED" disabled variant="secondary" />
       </View>
     </>
   );

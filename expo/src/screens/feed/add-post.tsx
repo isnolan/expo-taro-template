@@ -36,30 +36,14 @@ export const AddPost = () => {
         onError: () => {
           showErrorMessage('Error adding post');
         },
-      }
+      },
     );
   };
   return (
     <View className="flex-1 p-4 ">
-      <ControlledInput
-        name="title"
-        label="Title"
-        control={control}
-        testID="title"
-      />
-      <ControlledInput
-        name="body"
-        label="Content"
-        control={control}
-        multiline
-        testID="body-input"
-      />
-      <Button
-        label="Add Post"
-        loading={isLoading}
-        onPress={handleSubmit(onSubmit)}
-        testID="add-post-button"
-      />
+      <ControlledInput name="title" label="Title" control={control} testID="title" />
+      <ControlledInput name="body" label="Content" control={control} multiline testID="body-input" />
+      <Button label="Add Post" loading={isLoading} onPress={handleSubmit(onSubmit)} testID="add-post-button" />
     </View>
   );
 };

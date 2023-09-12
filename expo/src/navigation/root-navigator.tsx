@@ -24,13 +24,7 @@ export const Root = () => {
   }, [hideSplash, status]);
 
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-        gestureEnabled: false,
-        animation: 'none',
-      }}
-    >
+    <Stack.Navigator screenOptions={{ headerShown: false, gestureEnabled: false, animation: 'none' }}>
       {isFirstTime ? (
         <Stack.Screen name="Onboarding" component={Onboarding} />
       ) : (

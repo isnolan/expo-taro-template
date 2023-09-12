@@ -26,13 +26,7 @@ const ColorVariant = ({ name }: { name: ColorName }) => {
       </Text>
       <View className=" flex-row flex-wrap content-between  justify-between  ">
         {Object.entries(colors[name]).map(([key, value]) => {
-          return (
-            <ColorCard
-              key={`${colors[name]}-${key}`}
-              value={key}
-              color={value}
-            />
-          );
+          return <ColorCard key={`${colors[name]}-${key}`} value={key} color={value} />;
         })}
       </View>
     </View>

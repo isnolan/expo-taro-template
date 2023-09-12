@@ -18,10 +18,8 @@ export const LOCAL = 'local';
 export const getLanguage = () => storage.getString(LOCAL); // 'Marc' getItem<Language | undefined>(LOCAL);
 
 export const translate = memoize(
-  (key: TxKeyPath, options = undefined) =>
-    i18n.t(key, options) as unknown as string,
-  (key: TxKeyPath, options: typeof TranslateOptions) =>
-    options ? key + JSON.stringify(options) : key
+  (key: TxKeyPath, options = undefined) => i18n.t(key, options) as unknown as string,
+  (key: TxKeyPath, options: typeof TranslateOptions) => (options ? key + JSON.stringify(options) : key),
 );
 
 export const changeLanguage = (lang: Language) => {
@@ -43,7 +41,7 @@ export const useSelectedLanguage = () => {
       setLang(lang);
       if (lang !== undefined) changeLanguage(lang as Language);
     },
-    [setLang]
+    [setLang],
   );
 
   return { language: language as Language, setLanguage };

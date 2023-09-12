@@ -1,7 +1,4 @@
-import type {
-  BottomSheetModal,
-  BottomSheetModalProps,
-} from '@gorhom/bottom-sheet';
+import type { BottomSheetModal, BottomSheetModalProps } from '@gorhom/bottom-sheet';
 
 export type ModalProps = BottomSheetModalProps & {
   title?: string;

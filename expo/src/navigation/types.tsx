@@ -11,7 +11,4 @@ declare global {
   }
 }
 
-export type RouteProp<T extends keyof RootStackParamList> = NRouteProp<
-  RootStackParamList,
-  T
->;
+export type RouteProp<T extends keyof RootStackParamList> = NRouteProp<RootStackParamList, T>;

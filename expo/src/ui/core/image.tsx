@@ -8,20 +8,8 @@ export type ImgProps = ImageProps & {
   className?: string;
 };
 
-export const Image = ({
-  style,
-  className,
-  placeholder = 'L6PZfSi_.AyE_3t7t7R**0o#DgR4',
-  ...props
-}: ImgProps) => {
-  return (
-    <SImage
-      className={className}
-      placeholder={placeholder}
-      style={style}
-      {...props}
-    />
-  );
+export const Image = ({ style, className, placeholder = 'L6PZfSi_.AyE_3t7t7R**0o#DgR4', ...props }: ImgProps) => {
+  return <SImage className={className} placeholder={placeholder} style={style} {...props} />;
 };
 
 export const preloadImages = (sources: string[]) => {

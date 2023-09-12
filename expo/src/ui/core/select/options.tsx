@@ -23,42 +23,36 @@ function keyExtractor(item: Option) {
   return `select-item-${item.value}`;
 }
 
-export const Options = React.forwardRef<BottomSheetModal, OptionsProps>(
-  ({ options, onSelect, value }, ref) => {
-    const height = options.length * 70 + 100;
-    const snapPoints = React.useMemo(() => [height], [height]);
-    const { colorScheme } = useColorScheme();
-    const isDark = colorScheme === 'dark';
-    const renderSelectItem = React.useCallback(
-      ({ item }: { item: Option }) => (
-        <Option
-          key={`select-item-${item.value}`}
-          label={item.label}
-          selected={value === item.value}
-          onPress={() => onSelect(item)}
-        />
-      ),
-      [onSelect, value]
-    );
+export const Options = React.forwardRef<BottomSheetModal, OptionsProps>(({ options, onSelect, value }, ref) => {
+  const height = options.length * 70 + 100;
+  const snapPoints = React.useMemo(() => [height], [height]);
+  const { colorScheme } = useColorScheme();
+  const isDark = colorScheme === 'dark';
+  const renderSelectItem = React.useCallback(
+    ({ item }: { item: Option }) => (
+      <Option
+        key={`select-item-${item.value}`}
+        label={item.label}
+        selected={value === item.value}
+        onPress={() => onSelect(item)}
+      />
+    ),
+    [onSelect, value],
+  );
 
-    return (
-      <Modal
-        ref={ref}
-        index={0}
-        snapPoints={snapPoints}
-        backgroundStyle={{
-          backgroundColor: isDark ? colors.charcoal[800] : colors.white,
-        }}
-      >
-        <BottomSheetFlatList
-          data={options}
-          keyExtractor={keyExtractor}
-          renderItem={renderSelectItem}
-        />
-      </Modal>
-    );
-  }
-);
+  return (
+    <Modal
+      ref={ref}
+      index={0}
+      snapPoints={snapPoints}
+      backgroundStyle={{
+        backgroundColor: isDark ? colors.charcoal[800] : colors.white,
+      }}
+    >
+      <BottomSheetFlatList data={options} keyExtractor={keyExtractor} renderItem={renderSelectItem} />
+    </Modal>
+  );
+});
 
 const Option = React.memo(
   ({
@@ -80,5 +74,5 @@ const Option = React.memo(
         {selected && <Check fill="fill-black dark:fill-white" />}
       </Pressable>
     );
-  }
+  },
 );

@@ -13,10 +13,8 @@ export const Feed = () => {
   const { navigate } = useNavigation();
 
   const renderItem = React.useCallback(
-    ({ item }: { item: Post }) => (
-      <Card {...item} onPress={() => navigate('Post', { id: item.id })} />
-    ),
-    [navigate]
+    ({ item }: { item: Post }) => <Card {...item} onPress={() => navigate('Post', { id: item.id })} />,
+    [navigate],
   );
 
   if (isError) {

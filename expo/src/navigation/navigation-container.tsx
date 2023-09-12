@@ -4,11 +4,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import { useThemeConfig } from './use-theme-config';
 
-export const NavigationContainer = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const NavigationContainer = ({ children }: { children: React.ReactNode }) => {
   const theme = useThemeConfig();
   return (
     <SafeAreaProvider>

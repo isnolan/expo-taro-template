@@ -16,8 +16,7 @@ import { ThemeItem } from './theme-item';
 export const Settings = () => {
   const signOut = useAuth.use.signOut();
   const { colorScheme } = useColorScheme();
-  const iconColor =
-    colorScheme === 'dark' ? colors.neutral[400] : colors.neutral[500];
+  const iconColor = colorScheme === 'dark' ? colors.neutral[400] : colors.neutral[500];
   return (
     <>
       <FocusAwareStatusBar />
@@ -38,36 +37,16 @@ export const Settings = () => {
           </ItemsContainer>
 
           <ItemsContainer title="settings.support_us">
-            <Item
-              text="settings.share"
-              icon={<Share color={iconColor} />}
-              onPress={() => {}}
-            />
-            <Item
-              text="settings.rate"
-              icon={<Rate color={iconColor} />}
-              onPress={() => {}}
-            />
-            <Item
-              text="settings.support"
-              icon={<Support color={iconColor} />}
-              onPress={() => {}}
-            />
+            <Item text="settings.share" icon={<Share color={iconColor} />} onPress={() => {}} />
+            <Item text="settings.rate" icon={<Rate color={iconColor} />} onPress={() => {}} />
+            <Item text="settings.support" icon={<Support color={iconColor} />} onPress={() => {}} />
           </ItemsContainer>
 
           <ItemsContainer title="settings.links">
             <Item text="settings.privacy" onPress={() => {}} />
             <Item text="settings.terms" onPress={() => {}} />
-            <Item
-              text="settings.github"
-              icon={<Github color={iconColor} />}
-              onPress={() => {}}
-            />
-            <Item
-              text="settings.website"
-              icon={<Website color={iconColor} />}
-              onPress={() => {}}
-            />
+            <Item text="settings.github" icon={<Github color={iconColor} />} onPress={() => {}} />
+            <Item text="settings.website" icon={<Website color={iconColor} />} onPress={() => {}} />
           </ItemsContainer>
 
           <View className="my-8">

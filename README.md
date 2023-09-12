@@ -1,11 +1,11 @@
 # Expo & Taro Template
 
-这是一个混合 Expo 和 Taro 的 React Native 模板，旨在快速启动和统一项目的构建和开发过程。
+这是一个基于 [Expo](https://starter.obytes.com/overview/) 和 [Taro](https://docs.taro.zone/docs/) 的 React Native 混合架构模板，旨在快速启动跨平台的统一项目的构建和开发架构。
 
 # 主要特点
 
 - Expo 用于快速开发和预览 React Native 应用。
-- Taro 用于构建多端（小程序、H5、React Native 等）应用。
+- Taro 用于构建多端（小程序、H5）应用。
 - 集成 ESLint、Prettier 和 TypeScript，用于代码格式化和静态检查。
 - 提供共享的基础配置，以保证项目风格和规范统一。
 

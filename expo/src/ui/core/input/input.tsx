@@ -36,25 +36,12 @@ export const Input = React.forwardRef<TextInput, NInputProps>((props, ref) => {
     ? 'border-charcoal-700'
     : 'border-neutral-400';
 
-  const bgColor = isDark
-    ? 'bg-charcoal-800'
-    : error
-    ? 'bg-danger-50'
-    : 'bg-neutral-200';
+  const bgColor = isDark ? 'bg-charcoal-800' : error ? 'bg-danger-50' : 'bg-neutral-200';
   const textDirection = isRTL ? 'text-right' : 'text-left';
   return (
     <View className="mb-4">
       {label && (
-        <Text
-          variant="md"
-          className={
-            error
-              ? 'text-danger-600'
-              : isDark
-              ? 'text-charcoal-100'
-              : 'text-black'
-          }
-        >
+        <Text variant="md" className={error ? 'text-danger-600' : isDark ? 'text-charcoal-100' : 'text-black'}>
           {label}
         </Text>
       )}
@@ -66,9 +53,7 @@ export const Input = React.forwardRef<TextInput, NInputProps>((props, ref) => {
         onBlur={onBlur}
         onFocus={onFocus}
         {...inputProps}
-        style={StyleSheet.flatten([
-          { writingDirection: isRTL ? 'rtl' : 'ltr' },
-        ])}
+        style={StyleSheet.flatten([{ writingDirection: isRTL ? 'rtl' : 'ltr' }])}
       />
       {error && <Text variant="error">{error}</Text>}
     </View>

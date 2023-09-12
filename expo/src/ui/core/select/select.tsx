@@ -22,24 +22,10 @@ export interface SelectProps {
 }
 
 export const Select = (props: SelectProps) => {
-  const {
-    label,
-    value,
-    error,
-    options = [],
-    placeholder = 'select...',
-    disabled = false,
-    onSelect,
-  } = props;
+  const { label, value, error, options = [], placeholder = 'select...', disabled = false, onSelect } = props;
   const optionsRef = useModalRef();
-  const open = React.useCallback(
-    () => optionsRef.current?.present(),
-    [optionsRef]
-  );
-  const close = React.useCallback(
-    () => optionsRef.current?.dismiss(),
-    [optionsRef]
-  );
+  const open = React.useCallback(() => optionsRef.current?.present(), [optionsRef]);
+  const close = React.useCallback(() => optionsRef.current?.dismiss(), [optionsRef]);
   const { colorScheme } = useColorScheme();
   const isDark = colorScheme === 'dark';
   const onSelectOption = React.useCallback(
@@ -47,15 +33,13 @@ export const Select = (props: SelectProps) => {
       onSelect?.(option.value);
       close();
     },
-    [close, onSelect]
+    [close, onSelect],
   );
 
   const { borderColor, bgColor, valueColor, labelColor } = useColors(!!error);
 
   const textValue =
-    value !== undefined
-      ? options?.filter((t) => t.value === value)?.[0]?.label ?? placeholder
-      : placeholder;
+    value !== undefined ? options?.filter((t) => t.value === value)?.[0]?.label ?? placeholder : placeholder;
 
   return (
     <>
@@ -88,29 +72,13 @@ const useColors = (error: boolean) => {
   const { colorScheme } = useColorScheme();
   const isDark = colorScheme === 'dark';
 
-  const borderColor = error
-    ? 'border-danger-600'
-    : isDark
-    ? 'border-charcoal-700'
-    : 'border-neutral-400';
+  const borderColor = error ? 'border-danger-600' : isDark ? 'border-charcoal-700' : 'border-neutral-400';
 
-  const bgColor = isDark
-    ? 'bg-charcoal-800'
-    : error
-    ? 'bg-danger-50'
-    : 'bg-neutral-200';
+  const bgColor = isDark ? 'bg-charcoal-800' : error ? 'bg-danger-50' : 'bg-neutral-200';
 
-  const labelColor = error
-    ? 'text-danger-600'
-    : isDark
-    ? 'text-charcoal-100'
-    : 'text-black';
+  const labelColor = error ? 'text-danger-600' : isDark ? 'text-charcoal-100' : 'text-black';
 
-  const valueColor = error
-    ? 'text-danger-600'
-    : isDark
-    ? 'text-charcoal-100'
-    : 'text-neutral-600';
+  const valueColor = error ? 'text-danger-600' : isDark ? 'text-charcoal-100' : 'text-neutral-600';
 
   return { borderColor, bgColor, labelColor, valueColor } as const;
 };
