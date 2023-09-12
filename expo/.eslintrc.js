@@ -4,7 +4,7 @@ module.exports = {
   // Configuration for JavaScript files
   extends: ['@react-native-community', 'plugin:prettier/recommended'],
   plugins: ['unicorn'],
-  parserOptions: { project: './tsconfig.json', requireConfigFile: false },
+  parserOptions: { project: './tsconfig.json', requireConfigFile: false, tsconfigRootDir: __dirname },
   rules: {
     'prettier/prettier': ['error', { singleQuote: true, endOfLine: 'auto' }],
     'unicorn/filename-case': ['error', { case: 'kebabCase', ignore: ['/android', '/ios'] }],
@@ -15,7 +15,7 @@ module.exports = {
       files: ['**/*.ts', '**/*.tsx', '**/*.js'],
       plugins: ['@typescript-eslint', 'unused-imports', 'tailwindcss', 'simple-import-sort'],
       extends: ['plugin:tailwindcss/recommended', '@react-native-community', 'plugin:prettier/recommended'],
-      parserOptions: { project: './tsconfig.json', requireConfigFile: false },
+      // parserOptions: { project: './tsconfig.json', requireConfigFile: false },
       rules: {
         'prettier/prettier': ['error', { singleQuote: true, endOfLine: 'auto' }],
         'max-params': ['error', 3], // Limit the number of parameters in a function to use object instead
