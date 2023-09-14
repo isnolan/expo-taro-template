@@ -1,9 +1,9 @@
 import type { RouteProp as NRouteProp } from '@react-navigation/native';
 
 import type { AuthStackParamList } from './auth-navigator';
-import type { FeedStackParamList } from './feed-navigator';
+import type { ChatStackParamList } from './chat-navigator';
 
-export type RootStackParamList = AuthStackParamList & FeedStackParamList; //  & FooStackParamList & BarStackParamList
+export type RootStackParamList = AuthStackParamList & ChatStackParamList; //  & FooStackParamList & BarStackParamList
 // very important to type check useNavigation hook
 declare global {
   namespace ReactNavigation {

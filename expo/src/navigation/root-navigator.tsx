@@ -7,8 +7,8 @@ import { useIsFirstTime } from '@/core/hooks';
 import { Onboarding } from '@/screens';
 
 import { AuthNavigator } from './auth-navigator';
+import { ChatNavigator } from './chat-navigator';
 import { NavigationContainer } from './navigation-container';
-import { TabNavigator } from './tab-navigator';
 const Stack = createNativeStackNavigator();
 
 export const Root = () => {
@@ -32,7 +32,7 @@ export const Root = () => {
           {status === 'signOut' ? (
             <Stack.Screen name="Auth" component={AuthNavigator} />
           ) : (
-            <Stack.Screen name="App" component={TabNavigator} />
+            <Stack.Screen name="App" component={ChatNavigator} />
           )}
         </Stack.Group>
       )}

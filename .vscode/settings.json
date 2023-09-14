@@ -9,5 +9,8 @@
   },
   "files.associations": {
     "*.env*": "properties"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }

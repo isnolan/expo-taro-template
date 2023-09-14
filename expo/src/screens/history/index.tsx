@@ -8,7 +8,7 @@ import { EmptyList, FocusAwareStatusBar, Text, View } from '@/ui';
 
 import { Card } from './card';
 
-export const Feed = () => {
+export const History = () => {
   const { data, isLoading, isError } = usePosts();
   const { navigate } = useNavigation();
 

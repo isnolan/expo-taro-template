@@ -1,10 +1,10 @@
 {
   "onboarding": {
-    "message": "Welcome to obytes app site"
+    "message": "欢迎光临！"
   },
   "settings": {
-    "about": "About",
-    "app_name": "App Name",
+    "about": "关于",
+    "app_name": "应用名称",
     "english": "English",
     "chinese": "简体中文",
     "generale": "General",
@@ -18,9 +18,9 @@
       "dark": "Dark",
       "light": "Light",
       "system": "System",
-      "title": "Theme"
+      "title": "主题"
     },
-    "title": "Settings",
+    "title": "设置",
     "version": "Version",
   },
   "welcome": "Welcome to obytes app site"
