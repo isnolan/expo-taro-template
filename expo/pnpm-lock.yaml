@@ -8,8 +8,10 @@ specifiers:
   '@hookform/resolvers': ^2.9.11
   '@react-native-community/eslint-config': ^3.2.0
   '@react-navigation/bottom-tabs': ^6.5.7
+  '@react-navigation/drawer': ^6.6.3
   '@react-navigation/native': ^6.1.6
   '@react-navigation/native-stack': ^6.9.12
+  '@react-navigation/stack': ^6.3.17
   '@shopify/flash-list': 1.4.3
   '@tanstack/react-query': ^4.26.1
   '@testing-library/jest-dom': ^5.16.5
@@ -82,8 +84,10 @@ dependencies:
   '@gorhom/bottom-sheet': 4.5.0_uyljr7aimjp5zimpq2qhwj7h7i
   '@hookform/resolvers': 2.9.11_react-hook-form@7.46.1
   '@react-navigation/bottom-tabs': 6.5.8_4bkqpj5wr2mwxt472j33p72bb4
+  '@react-navigation/drawer': 6.6.3_l2ik36dum5xxgzzhpotgpesbii
   '@react-navigation/native': 6.1.7_w3wfaqtmew7npdnc2xizqregy4
   '@react-navigation/native-stack': 6.9.13_4bkqpj5wr2mwxt472j33p72bb4
+  '@react-navigation/stack': 6.3.17_h4fwz3vhaeofz6fdqrfvrqgjxu
   '@shopify/flash-list': 1.4.3_fj4cloeu6q6aspdzdpolphspgq
   '@tanstack/react-query': 4.35.0_riodt6ig6uw5vxosy7mjalr2na
   app-icon-badge: 0.0.15
@@ -2993,6 +2997,29 @@ packages:
       use-latest-callback: 0.1.6_react@18.2.0
     dev: false
 
+  /@react-navigation/drawer/6.6.3_l2ik36dum5xxgzzhpotgpesbii:
+    resolution: {integrity: sha512-oQzHqH6svtSIun6+rikQtku6ye2CyyxT4xf3RQLVsBvK7+g4tDdKKLcjgoJmuT1zBZC3SSu3wNeqp8cg4cr2PQ==}
+    peerDependencies:
+      '@react-navigation/native': ^6.0.0
+      react: '*'
+      react-native: '*'
+      react-native-gesture-handler: '>= 1.0.0'
+      react-native-reanimated: '>= 1.0.0'
+      react-native-safe-area-context: '>= 3.0.0'
+      react-native-screens: '>= 3.0.0'
+    dependencies:
+      '@react-navigation/elements': 1.3.18_ehhdqglo3yfsvsfzyx7s4mmz44
+      '@react-navigation/native': 6.1.7_w3wfaqtmew7npdnc2xizqregy4
+      color: 4.2.3
+      react: 18.2.0
+      react-native: 0.72.4_ybhiajasm3ibxzugqo3l44m2lq
+      react-native-gesture-handler: 2.12.1_w3wfaqtmew7npdnc2xizqregy4
+      react-native-reanimated: 3.3.0_nwnj7k3euqz3clqzadyicskz7i
+      react-native-safe-area-context: 4.6.3_w3wfaqtmew7npdnc2xizqregy4
+      react-native-screens: 3.22.1_w3wfaqtmew7npdnc2xizqregy4
+      warn-once: 0.1.1
+    dev: false
+
   /@react-navigation/elements/1.3.18_ehhdqglo3yfsvsfzyx7s4mmz44:
     resolution: {integrity: sha512-/0hwnJkrr415yP0Hf4PjUKgGyfshrvNUKFXN85Mrt1gY49hy9IwxZgrrxlh0THXkPeq8q4VWw44eHDfAcQf20Q==}
     peerDependencies:
@@ -3043,6 +3070,27 @@ packages:
     resolution: {integrity: sha512-lTM8gSFHSfkJvQkxacGM6VJtBt61ip2XO54aNfswD+KMw6eeZ4oehl7m0me3CR9hnDE4+60iAZR8sAhvCiI3NA==}
     dependencies:
       nanoid: 3.3.6
+    dev: false
+
+  /@react-navigation/stack/6.3.17_h4fwz3vhaeofz6fdqrfvrqgjxu:
+    resolution: {integrity: sha512-8/8ZvJROK3fp6PRmQ9MrXd9epBowA8NkfCaWW/N9H5arqwNX9lTXAkmcjicRhjpX+UNlMBR9dTLkWvPRe2vY9A==}
+    peerDependencies:
+      '@react-navigation/native': ^6.0.0
+      react: '*'
+      react-native: '*'
+      react-native-gesture-handler: '>= 1.0.0'
+      react-native-safe-area-context: '>= 3.0.0'
+      react-native-screens: '>= 3.0.0'
+    dependencies:
+      '@react-navigation/elements': 1.3.18_ehhdqglo3yfsvsfzyx7s4mmz44
+      '@react-navigation/native': 6.1.7_w3wfaqtmew7npdnc2xizqregy4
+      color: 4.2.3
+      react: 18.2.0
+      react-native: 0.72.4_ybhiajasm3ibxzugqo3l44m2lq
+      react-native-gesture-handler: 2.12.1_w3wfaqtmew7npdnc2xizqregy4
+      react-native-safe-area-context: 4.6.3_w3wfaqtmew7npdnc2xizqregy4
+      react-native-screens: 3.22.1_w3wfaqtmew7npdnc2xizqregy4
+      warn-once: 0.1.1
     dev: false
 
   /@samverschueren/stream-to-observable/0.3.1_rxjs@6.6.7:

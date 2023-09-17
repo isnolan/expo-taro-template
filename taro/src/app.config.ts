@@ -1,11 +1,9 @@
 export default defineAppConfig({
-  pages: [
-    'pages/index/index'
-  ],
+  pages: ['pages/chat/index'],
   window: {
     backgroundTextStyle: 'light',
     navigationBarBackgroundColor: '#fff',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
-  }
-})
+    navigationBarTitleText: 'Chat Once',
+    navigationBarTextStyle: 'black',
+  },
+});

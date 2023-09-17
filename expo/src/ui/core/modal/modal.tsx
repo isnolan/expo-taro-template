@@ -13,19 +13,8 @@ export const useModalRef = () => {
 };
 
 export const Modal = React.forwardRef(
-  (
-    {
-      snapPoints: _snapPoints = ['60%'],
-      title,
-      detached = false,
-      ...props
-    }: ModalProps,
-    ref: ModalRef
-  ) => {
-    const detachedProps = React.useMemo(
-      () => getDetachedProps(detached),
-      [detached]
-    );
+  ({ snapPoints: _snapPoints = ['60%'], title, detached = false, ...props }: ModalProps, ref: ModalRef) => {
+    const detachedProps = React.useMemo(() => getDetachedProps(detached), [detached]);
     const bottomSheetRef = useModalRef();
     const snapPoints = React.useMemo(() => _snapPoints, [_snapPoints]);
 
@@ -33,10 +22,7 @@ export const Modal = React.forwardRef(
       bottomSheetRef.current?.dismiss();
     }, [bottomSheetRef]);
 
-    React.useImperativeHandle(
-      ref,
-      () => (bottomSheetRef.current as BottomSheetModal) || null
-    );
+    React.useImperativeHandle(ref, () => (bottomSheetRef.current as BottomSheetModal) || null);
 
     const renderHandleComponent = React.useCallback(
       () => (
@@ -45,7 +31,7 @@ export const Modal = React.forwardRef(
           <ModalHeader title={title} dismiss={dismiss} />
         </>
       ),
-      [title, dismiss]
+      [title, dismiss],
     );
 
     return (
@@ -59,7 +45,7 @@ export const Modal = React.forwardRef(
         handleComponent={renderHandleComponent}
       />
     );
-  }
+  },
 );
 
 const getDetachedProps = (detached: boolean) => {

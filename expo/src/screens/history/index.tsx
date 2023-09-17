@@ -8,15 +8,13 @@ import { EmptyList, FocusAwareStatusBar, Text, View } from '@/ui';
 
 import { Card } from './card';
 
-export const Feed = () => {
+export const History = () => {
   const { data, isLoading, isError } = usePosts();
   const { navigate } = useNavigation();
 
   const renderItem = React.useCallback(
-    ({ item }: { item: Post }) => (
-      <Card {...item} onPress={() => navigate('Post', { id: item.id })} />
-    ),
-    [navigate]
+    ({ item }: { item: Post }) => <Card {...item} onPress={() => navigate('Post', { id: item.id })} />,
+    [navigate],
   );
 
   if (isError) {

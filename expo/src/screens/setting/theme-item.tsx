@@ -10,16 +10,13 @@ import { Item } from './item';
 export const ThemeItem = () => {
   const { selectedTheme, setSelectedTheme } = useSelectedTheme();
   const optionsRef = useModalRef();
-  const open = React.useCallback(
-    () => optionsRef.current?.present(),
-    [optionsRef]
-  );
+  const open = React.useCallback(() => optionsRef.current?.present(), [optionsRef]);
   const onSelect = React.useCallback(
     (option: Option) => {
       setSelectedTheme(option.value as ColorSchemeType);
       optionsRef.current?.dismiss();
     },
-    [setSelectedTheme, optionsRef]
+    [setSelectedTheme, optionsRef],
   );
 
   const themes = React.useMemo(
@@ -28,23 +25,15 @@ export const ThemeItem = () => {
       { label: `${translate('settings.theme.light')} 🌞`, value: 'light' },
       { label: `${translate('settings.theme.system')} ⚙️`, value: 'system' },
     ],
-    []
+    [],
   );
 
-  const theme = React.useMemo(
-    () => themes.find((t) => t.value === selectedTheme),
-    [selectedTheme, themes]
-  );
+  const theme = React.useMemo(() => themes.find((t) => t.value === selectedTheme), [selectedTheme, themes]);
 
   return (
     <>
       <Item text="settings.theme.title" value={theme?.label} onPress={open} />
-      <Options
-        ref={optionsRef}
-        options={themes}
-        onSelect={onSelect}
-        value={theme?.value}
-      />
+      <Options ref={optionsRef} options={themes} onSelect={onSelect} value={theme?.value} />
     </>
   );
 };

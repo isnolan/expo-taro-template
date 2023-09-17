@@ -14,10 +14,7 @@ export const Item = ({ text, value, icon, onPress }: ItemProps) => {
   const isPressable = onPress !== undefined;
   const Container = isPressable ? TouchableOpacity : View;
   return (
-    <Container
-      onPress={onPress}
-      className="flex-1 flex-row items-center justify-between px-4 py-2"
-    >
+    <Container onPress={onPress} className="flex-1 flex-row items-center justify-between px-4 py-2">
       <View className="flex-row items-center">
         {icon && <View className="pr-2">{icon}</View>}
         <Text variant="md" tx={text} />

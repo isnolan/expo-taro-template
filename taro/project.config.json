@@ -4,25 +4,25 @@
     "description": "",
     "appid": "wxe98802b843225970",
     "setting": {
-      "urlCheck": true,
-      "es6": false,
-      "enhance": false,
-      "compileHotReLoad": false,
-      "postcss": false,
-      "preloadBackgroundData": false,
-      "minified": false,
-      "newFeature": true,
-      "autoAudits": false,
-      "coverView": true,
-      "showShadowRootInWxmlPanel": false,
-      "scopeDataCheck": false,
-      "useCompilerModule": false,
-      "babelSetting": {
-        "ignore": [],
-        "disablePlugins": [],
-        "outputPath": ""
-      },
-      "condition": false
+        "urlCheck": true,
+        "es6": false,
+        "enhance": false,
+        "compileHotReLoad": false,
+        "postcss": false,
+        "preloadBackgroundData": false,
+        "minified": false,
+        "newFeature": true,
+        "autoAudits": false,
+        "coverView": true,
+        "showShadowRootInWxmlPanel": false,
+        "scopeDataCheck": false,
+        "useCompilerModule": false,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "condition": false
     },
     "compileType": "miniprogram",
     "simulatorType": "wechat",
@@ -31,11 +31,11 @@
     "libVersion": "3.0.2",
     "srcMiniprogramRoot": "dist/",
     "packOptions": {
-      "ignore": [],
-      "include": []
+        "ignore": [],
+        "include": []
     },
     "editorSetting": {
-      "tabIndent": "insertSpaces",
-      "tabSize": 4
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
     }
 }

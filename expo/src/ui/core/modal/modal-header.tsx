@@ -10,21 +10,17 @@ type ModalHeaderProps = {
   dismiss: () => void;
 };
 
-export const ModalHeader = React.memo(
-  ({ title, dismiss }: ModalHeaderProps) => {
-    return (
-      <View className="flex-row py-4 px-2">
-        <View className="h-[24px] w-[24px]" />
-        <View className="flex-1">
-          <Text className="text-center text-[16px] font-bold text-[#26313D]">
-            {title}
-          </Text>
-        </View>
-        <CloseButton close={dismiss} />
+export const ModalHeader = React.memo(({ title, dismiss }: ModalHeaderProps) => {
+  return (
+    <View className="flex-row py-4 px-2">
+      <View className="h-[24px] w-[24px]" />
+      <View className="flex-1">
+        <Text className="text-center text-[16px] font-bold text-[#26313D]">{title}</Text>
       </View>
-    );
-  }
-);
+      <CloseButton close={dismiss} />
+    </View>
+  );
+});
 
 const CloseButton = ({ close }: { close: () => void }) => {
   return (

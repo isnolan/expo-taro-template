@@ -28,14 +28,7 @@ export const textVariants = {
   error: ' text-[12px] leading-[30px] text-danger-500',
 };
 
-export const Text = ({
-  variant = 'md',
-  className = '',
-  style,
-  tx,
-  children,
-  ...props
-}: Props) => {
+export const Text = ({ variant = 'md', className = '', style, tx, children, ...props }: Props) => {
   const content = tx ? translate(tx) : children;
   return (
     <SText
@@ -45,10 +38,7 @@ export const Text = ({
       ${textVariants[variant]}
       ${className}
     `}
-      style={StyleSheet.flatten([
-        { writingDirection: isRTL ? 'rtl' : 'ltr' },
-        style,
-      ])}
+      style={StyleSheet.flatten([{ writingDirection: isRTL ? 'rtl' : 'ltr' }, style])}
       {...props}
     >
       {content}
