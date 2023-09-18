@@ -37,6 +37,7 @@ specifiers:
   eslint-plugin-unicorn: ^46.0.0
   eslint-plugin-unused-imports: ^2.0.0
   expo: ~49.0.6
+  expo-apple-authentication: ~6.1.0
   expo-build-properties: ~0.8.3
   expo-constants: ~14.4.2
   expo-dev-client: ~2.4.8
@@ -95,6 +96,7 @@ dependencies:
   app-icon-badge: 0.0.15
   axios: 1.5.0
   expo: 49.0.10_@babel+core@7.22.17
+  expo-apple-authentication: 6.1.2_expo@49.0.10
   expo-build-properties: 0.8.3_expo@49.0.10
   expo-constants: 14.4.2_expo@49.0.10
   expo-dev-client: 2.4.8_expo@49.0.10
@@ -5874,6 +5876,14 @@ packages:
       jest-message-util: 29.6.3
       jest-util: 29.6.3
     dev: true
+
+  /expo-apple-authentication/6.1.2_expo@49.0.10:
+    resolution: {integrity: sha512-wXGrltitAu/MncQ7F16uQIZO5Uva2tof7pBa3pbEg1g6TAp4YQhJ1iwEeit0Jlk9J64R9c+kKzbyuRquWMzyyA==}
+    peerDependencies:
+      expo: '*'
+    dependencies:
+      expo: 49.0.10_@babel+core@7.22.17
+    dev: false
 
   /expo-application/5.3.0_expo@49.0.10:
     resolution: {integrity: sha512-XLkaELwmiXW6JjFVkwuiFQaGZoNKAxNAcSJkFdz8s4rCljEwehylbzoPk37QHw3cxqb4v0/2EICtg4C4kpEVCA==}

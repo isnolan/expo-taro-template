@@ -20,6 +20,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   updates: { fallbackToCacheTimeout: 0 },
   assetBundlePatterns: ['**/*'],
   ios: {
+    usesAppleSignIn: true,
     supportsTablet: true,
     bundleIdentifier: Env.BUNDLE_ID,
     googleServicesFile: './GoogleService-Info.plist',
@@ -38,6 +39,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   },
   plugins: [
     '@react-native-google-signin/google-signin',
+    'expo-apple-authentication',
     ['@bacons/link-assets', ['./assets/fonts/Inter.ttf']],
     'expo-localization',
     ['expo-build-properties', { android: { kotlinVersion: '1.7.22' } }],
