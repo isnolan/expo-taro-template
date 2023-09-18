@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cross-env EXPO_NO_DOTENV=1 expo start",
-    "prebuild": "cross-env EXPO_NO_DOTENV=1 pnpm expo prebuild",
+    "prebuild": "cross-env EXPO_NO_DOTENV=1 npx expo prebuild --clean",
     "android": "cross-env EXPO_NO_DOTENV=1 expo run:android",
     "ios": "cross-env EXPO_NO_DOTENV=1 expo run:ios",
     "doctor": "npx expo-doctor@latest",
@@ -39,6 +39,7 @@
     "@bacons/link-assets": "^1.1.0",
     "@gorhom/bottom-sheet": "^4.4.5",
     "@hookform/resolvers": "^2.9.11",
+    "@react-native-google-signin/google-signin": "^10.0.1",
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/drawer": "^6.6.3",
     "@react-navigation/native": "^6.1.6",

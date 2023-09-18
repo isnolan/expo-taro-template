@@ -4,6 +4,7 @@ import { useAuth } from '@/core';
 import { useSoftKeyboardEffect } from '@/core/keyboard';
 import { FocusAwareStatusBar } from '@/ui';
 
+import { LoginAuth } from './login-auth';
 import type { LoginFormProps } from './login-form';
 import { LoginForm } from './login-form';
 
@@ -15,10 +16,12 @@ export const Login = () => {
     console.log(data);
     signIn({ access: 'access-token', refresh: 'refresh-token' });
   };
+
   return (
     <>
       <FocusAwareStatusBar />
       <LoginForm onSubmit={onSubmit} />
+      <LoginAuth />
     </>
   );
 };

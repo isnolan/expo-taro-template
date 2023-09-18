@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import type { ConfigContext, ExpoConfig } from '@expo/config';
 
 import { ClientEnv, Env } from './env';
@@ -18,13 +17,12 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     resizeMode: 'cover',
     backgroundColor: '#2A3D4C',
   },
-  updates: {
-    fallbackToCacheTimeout: 0,
-  },
+  updates: { fallbackToCacheTimeout: 0 },
   assetBundlePatterns: ['**/*'],
   ios: {
     supportsTablet: true,
     bundleIdentifier: Env.BUNDLE_ID,
+    googleServicesFile: './GoogleService-Info.plist',
   },
 
   android: {
@@ -33,44 +31,29 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       backgroundColor: '#2A3D4C',
     },
     package: Env.PACKAGE,
+    googleServicesFile: './google-services.json',
   },
   web: {
     favicon: './assets/favicon.png',
   },
   plugins: [
+    '@react-native-google-signin/google-signin',
     ['@bacons/link-assets', ['./assets/fonts/Inter.ttf']],
     'expo-localization',
-    [
-      'expo-build-properties',
-      {
-        android: {
-          kotlinVersion: '1.7.22', // this is for softinput package
-        },
-      },
-    ],
+    ['expo-build-properties', { android: { kotlinVersion: '1.7.22' } }],
     [
       'app-icon-badge',
       {
         enabled: true,
         badges: [
-          {
-            text: Env.APP_ENV,
-            type: 'banner',
-            color: 'white',
-          },
-          {
-            text: Env.VERSION.toString(),
-            type: 'ribbon',
-            color: 'white',
-          },
+          { text: Env.APP_ENV, type: 'banner', color: 'white' },
+          { text: Env.VERSION.toString(), type: 'ribbon', color: 'white' },
         ],
       },
     ],
   ],
   extra: {
     ...ClientEnv,
-    eas: {
-      projectId: Env.EAS_PROJECT_ID,
-    },
+    eas: { projectId: Env.EAS_PROJECT_ID },
   },
 });
